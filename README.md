@@ -69,9 +69,9 @@ how many rectangle is possible if width is fixed at 3 ? It's minimum height amon
 ### Complexity : 
 O(M*N*M) time and O(M*N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[ ][ ] of previous row at any time only .
 
-## way 2 
+## Way 2 
 
-Lets think of 2 table - dp[ ] and left[ ] . dp[j] will tell us number of submatrices that end at (i,j). left[j] will tell us the index left of (i,j)till which all the values are greater or equal to height[i][j] from (i,j).
+Lets think of 2 tables - dp[ ] and left[ ] . dp[j] will tell us number of submatrices that end at (i,j). left[j] will tell us the index left of (i,j) till which all the values are greater or equal to height[i][j] from (i,j).
 
 ```
   | |
