@@ -100,7 +100,7 @@ so that ,
 
 height[b] >= height[c] >= height[d] 
 
-Now comes a, so that height[a] <  height[b] , height[a] < height[c] and height[a] >= height[d] . So we can pop b and c and calculate their left[ ] as left[b] = left[c] = a . Now a goes in the stack and waits for its left[ ] to be calculated . Now the stack looks like - 
+lets assume now comes a, so that height[a] <  height[b] , height[a] < height[c] and height[a] >= height[d] . So we can pop b and c and calculate their left[ ] as left[b] = left[c] = a . Now a goes in the stack and waits for its left[ ] to be calculated . Now the stack looks like - 
 
 - a 
 - d 
