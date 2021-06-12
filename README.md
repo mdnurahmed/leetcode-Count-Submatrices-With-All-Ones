@@ -88,7 +88,7 @@ So, dp[j] = dp[left[j]-1] + (j-left[j]+1)*height[i][j] .
 
 left[ ] can be calculated at O(N) time using a stack 
 
-### calculating left[ ] at linear time 
+### Calculating left[ ] at linear time 
 
 We can calculate  left[ ] in linear time using a stack . We traverse the heights from right to left . Every value in the stack means its left[ ] is still to be caculated . Lets assume the stack looks like this - 
 
