@@ -12,12 +12,12 @@ mat = [[1,0,1],
        [1,1,0]]
 #### Output: 13
 #### Explanation:
-There are 6 rectangles of side 1x1.
-There are 2 rectangles of side 1x2.
-There are 3 rectangles of side 2x1.
+There are 6 rectangles/submatrices of side 1x1.
+There are 2 rectangles/submatrices of side 1x2.
+There are 3 rectangles/submatrices of side 2x1.
 There is 1 rectangle of side 2x2. 
 There is 1 rectangle of side 3x1.
-Total number of rectangles = 6 + 2 + 3 + 1 + 1 = 13.
+Total number of rectangles/submatrices = 6 + 2 + 3 + 1 + 1 = 13.
 
 ### Example 2:
 #### Input: 
@@ -26,14 +26,14 @@ mat = [[0,1,1,0],
        [1,1,1,0]]
 #### Output: 24
 #### Explanation:
-There are 8 rectangles of side 1x1.
-There are 5 rectangles of side 1x2.
-There are 2 rectangles of side 1x3. 
-There are 4 rectangles of side 2x1.
-There are 2 rectangles of side 2x2. 
-There are 2 rectangles of side 3x1. 
+There are 8 rectangles/submatrices of side 1x1.
+There are 5 rectangles/submatrices of side 1x2.
+There are 2 rectangles/submatrices of side 1x3. 
+There are 4 rectangles/submatrices of side 2x1.
+There are 2 rectangles/submatrices of side 2x2. 
+There are 2 rectangles/submatrices of side 3x1. 
 There is 1 rectangle of side 3x2. 
-Total number of rectangles = 8 + 5 + 2 + 4 + 2 + 2 + 1 = 24.
+Total number of rectangles/submatrices = 8 + 5 + 2 + 4 + 2 + 2 + 1 = 24.
 
 ### Example 3:
 #### Input: 
@@ -63,8 +63,8 @@ We can imagine the 1s stack on top of each other and form pillars . height[i][j]
 | | | |
 a b c d 
 ```
-Lets solve this problem for each row . Number of rectangle that ends at point d can be of width 1,2,3 or 4 . 
-how many reactnagle is possible if fix width = 3 ? It's minimum height among (b,c,d) . 
+Lets solve this problem for each row . Number of rectangles/submatrices that ends at point d can be of width 1,2,3 or 4 . 
+how many rectangle is possible if width is fixed at 3 ? It's minimum height among (b,c,d) . So for every width we can find number of rectangles/submatrices that end at any point.
 
 ### Complexity : 
 O(M*N*M) time and O(M*N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[ ][ ] of previous row at any time only .
