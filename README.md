@@ -57,12 +57,12 @@ mat = [[1,0,1],[0,1,0],[1,0,1]]
 
 ### Way 1 
 We can imagine the 1s stack on top of each other and form pillars . height[i][j] will tell us the hegiht of the pillar at cell (i,j) . 
-
+```
   | |
   | | |  
 | | | |
 a b c d 
-
+```
 Lets solve this problem for each row . Number of rectangle that ends at point d can be of width 1,2,3 or 4 . 
 how many reactnagle is possible if fix width = 3 ? It's minimum height among (b,c,d) . 
 
@@ -73,11 +73,12 @@ O(M*N*M) time and O(M*N) space. where M is number of rows and N is number column
 
 Lets think of 2 table - dp[] and left[] . dp[j] will tell us number of submatrices that end at (i,j). left[j] will tell us the index left of (i,j)till which all the values are greater or equal to height[i][j] from (i,j).
 
-
+```
   | |
   | | |  
 | | | |
 a b c d 
+```
 
 For example , for the above case left[d] = b .
 
