@@ -67,11 +67,11 @@ Lets solve this problem for each row . Number of rectangle that ends at point d 
 how many reactnagle is possible if fix width = 3 ? It's minimum height among (b,c,d) . 
 
 ### Complexity : 
-O(M*N*M) time and O(M*N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[][] of previous row at any time only .
+O(M*N*M) time and O(M*N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[ ][ ] of previous row at any time only .
 
 ## way 2 
 
-Lets think of 2 table - dp[] and left[] . dp[j] will tell us number of submatrices that end at (i,j). left[j] will tell us the index left of (i,j)till which all the values are greater or equal to height[i][j] from (i,j).
+Lets think of 2 table - dp[ ] and left[ ] . dp[j] will tell us number of submatrices that end at (i,j). left[j] will tell us the index left of (i,j)till which all the values are greater or equal to height[i][j] from (i,j).
 
 ```
   | |
@@ -86,11 +86,11 @@ Then number of submatrices from left[j] to j is (j-left[j]+1)*height[i][j] .
 All the submatrices that ends at left[j]-1 can also be expanded to j . 
 So, dp[j] = dp[left[j]-1] + (j-left[j]+1)*height[i][j] . 
 
-left[] can be calculated at O(N) time using a stack 
+left[ ] can be calculated at O(N) time using a stack 
 
-### calculating left[] at linear time 
+### calculating left[ ] at linear time 
 
-We can calculate  left[] in linear time using a stack . We traverse the heights from right to left . Every value in the stack means its left[] is still to be caculated . Lets assume the stack looks like this - 
+We can calculate  left[ ] in linear time using a stack . We traverse the heights from right to left . Every value in the stack means its left[ ] is still to be caculated . Lets assume the stack looks like this - 
 
 - b 
 - c 
@@ -100,13 +100,13 @@ so that ,
 
 height[b] >= height[c] >= height[d] 
 
-Now comes a, so that height[a] <  height[b] , height[a] < height[c] and height[a] >= height[d] . So we can pop b and c and calculate their left[] as left[b] = left[c] = a . Now a goes in the stack and waits for its left[] to be calculated . Now the stack looks like - 
+Now comes a, so that height[a] <  height[b] , height[a] < height[c] and height[a] >= height[d] . So we can pop b and c and calculate their left[ ] as left[b] = left[c] = a . Now a goes in the stack and waits for its left[ ] to be calculated . Now the stack looks like - 
 
 - a 
 - d 
 
 ### Complexity : 
-O(M*N) time and O(N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[][] of previous row at any time only .
+O(M*N) time and O(N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[ ][ ] of previous row at any time only .
 
 
 
