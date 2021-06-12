@@ -106,7 +106,7 @@ lets assume now comes a, so that height[a] <  height[b] , height[a] < height[c] 
 - d 
 
 ### Complexity : 
-O(M*N) time and O(N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[ ][ ] of previous row at any time only .
+O(M*N) time and O(M*N) space. where M is number of rows and N is number columns . Although we can make space complexity O(N) as we need height[ ][ ] of previous row at any time only .
 
 
 
